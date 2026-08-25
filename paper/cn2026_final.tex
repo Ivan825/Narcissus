@@ -18,7 +18,7 @@
 
 \begin{document}
 \mainmatter
-\title{A Network and Its Reflection: What True, False, and Noise Self-Model Broadcasts Do and Do Not Change in an Evolving Multi-Agent Network}
+\title{A Network and Its Reflection: What True, False, and Noise Self-Model Broadcasts Do and Do Not Change in an Adaptive Multi-Agent Network}
 \titlerunning{A Network and Its Reflection}
 \author{Ivan Bhargava \and Harsh Modi}
 \authorrunning{I. Bhargava, H. Modi}
@@ -29,7 +29,7 @@
 \maketitle
 
 \begin{abstract}
-Networks often act on measurements of their own state, a loop in which descriptions can change what they describe. We build a controlled evolving-network model to ask when this loop causes genuine self-fulfilling effects. Across 3{,}127 deterministic runs with paired-seed comparisons, measurement without broadcast changes nothing. A seemingly strong ``pull'' toward false and replayed self-models disappears when untreated twin trajectories are scored against matched references, showing how intrinsic dynamics mimic performativity. Broadcasts do have real effects: they reshape cooperation and network structure, and whether a false self-model comes true, in the outcome sense, depends on how agents respond. Finally, attention to the broadcast is heritable and evolves downward under consequential feedback --- most steeply where that feedback carries high corrective drive --- surviving three architectural controls and an ecological ensemble. The results separate apparent performativity from genuine feedback effects and show that reliance on a collective self-model can itself evolve.
+Networks often act on measurements of their own state, a loop in which descriptions can change what they describe. We build a controlled adaptive-network model to ask when this loop causes genuine self-fulfilling effects. Across 3{,}127 deterministic runs with paired-seed comparisons, measurement without broadcast changes nothing. A seemingly strong ``pull'' toward false and replayed self-models disappears when untreated twin trajectories are scored against matched references, showing how intrinsic dynamics mimic performativity. Broadcasts do have real effects: they reshape cooperation and network structure, and whether a false self-model comes true, in the outcome sense, depends on how agents respond. Finally, attention to the broadcast is heritable and evolves downward under consequential feedback --- most steeply where that feedback carries high corrective drive --- surviving three architectural controls and an ecological ensemble. The results separate apparent performativity from genuine feedback effects and show that reliance on a collective self-model can itself evolve.
 \keywords{adaptive networks, agent-based modeling, reflexivity, self-fulfilling dynamics, performative prediction, evolution of trust}
 \end{abstract}
 
@@ -153,7 +153,8 @@ exhaustion or age causes death; founding ages are staggered to avoid cohort
 artifacts.
 
 \subsection{Observer and broadcast conditions}
-Every $\Delta t=10$ steps the observer computes the macrostate $S(t)$:
+Every $\Delta t=10$ steps the observer computes the macrostate $S(t)$, a
+vector of network and ecological observables:
 population, fragmentation (1 minus largest-component share), degree- and
 betweenness-concentration, Freeman centralization \cite{freeman1978centrality},
 per-capita costly-helping rate, energy Gini, turnover, and mean traits (logged,
@@ -245,10 +246,11 @@ R --- Replayed self-model & on & another run's genuine $S(t)$ & structure contro
 \end{tabular}}
 \end{table}
 
-\subsection{Emergent network structure}
+\subsection{Complex-network structure}
 At $t=2{,}000$ the giant component (six graphs: A and C $\times$ 3 seeds) has
 mean path length $L\approx1.8$--$2.5$, clustering $1.8$--$2.9\times$ a matched
-Erd\H{o}s--R\'enyi null --- though against the stricter degree-preserving null
+Erd\H{o}s--R\'enyi null --- though against the stricter degree-preserving
+configuration-model null
 most of that excess traces to the degree sequence (ratios $1.0$--$1.6$), so we
 make no small-world claim --- and degree CV $0.6$--$0.74$. Feedback acts on a
 small, dense, degree-heterogeneous clustered graph, not homogeneous mixing.
