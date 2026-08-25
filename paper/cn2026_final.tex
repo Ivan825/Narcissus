@@ -68,7 +68,7 @@ change: truthful feedback doubles costly cooperation, distorted broadcasts
 mobilize or pacify depending on the lie--response pairing (reversing under
 conformity), and false and noise broadcasts densify the network while also
 reducing hub concentration; and (4) receiver sensitivity as a continuous
-heritable trait, whose \emph{population distribution shifts systematically
+heritable trait, whose \emph{population mean shifts systematically
 under feedback}, tracking the broadcast-implied corrective-drive intensity and
 surviving three architectural controls and a randomized ecological ensemble ---
 reliance on the observer is not updated by rule; it evolves. Figure~\ref{fig:loop} summarizes the design.
@@ -102,19 +102,19 @@ we use hub removal as a standardized perturbation. A mean field fed back to
 units reshapes collective dynamics \cite{kuramoto1984chemical}; ours is
 multidimensional, potentially \emph{false}, and its units are born, die, and
 evolve.
-\textbf{Reflexivity and performative prediction (our baseline).}
+\textbf{Reflexivity and performative prediction.}
 Self-fulfilling prophecy \cite{merton1948self}, reflexivity in markets
 \cite{soros2013fallibility}, and the reactivity of rankings and metrics
 \cite{espeland2007rankings,strathern1997improving} motivate our
 false-broadcast conditions; here they are dosable and ablatable. The formal
 baseline we build on is performative prediction --- predictions that alter
 the distribution they forecast \cite{perdomo2020performative,hardt2025performative},
-including networked settings \cite{wang2023network}, self-fulfilling signals
-of an endogenous network state \cite{iwase2017self}, and, closest to us,
+including networked settings \cite{wang2023network}, endogenous
+self-fulfilling signals \cite{iwase2017self}, and --- closest to us ---
 populations deciding whether to trust predictions of collective outcomes
 \cite{gois2024performative}. That line updates trust from past accuracy and
-leaves causal identification of performative effects without randomization
-open \cite{cheng2024causal}; we extend it in two ways: a passive-twin design
+leaves causal identification without randomization open
+\cite{cheng2024causal}; we add two elements: a passive-twin design
 exposing a concrete false-positive failure mode of directional-alignment
 metrics (Sect.~\ref{sec:pull}), and a heritable receiver-sensitivity trait
 --- inherited and mutated with no rule referencing reliability --- plus
@@ -143,11 +143,12 @@ and $\bar\gamma$ its population mean.
 Agents hold energy; each step they pay metabolism and choose one action ---
 harvest, share (costly transfer to a neighbor), connect, prune, reproduce, or
 idle --- with probabilities proportional to trait- and state-dependent
-propensities. The agents are the vertices of a time-varying undirected graph
+propensities. Agents are the vertices of a time-varying undirected graph
 $G(t)=(V(t),E(t))$: \emph{connect} and reproduction add interaction edges,
 \emph{prune} and death remove them --- topology coevolves with state, an
-adaptive network \cite{gross2008adaptive} (structure: Sect.~3.4). The resource pool regenerates logistically; reproduction requires an energy
-threshold and copies traits with Gaussian mutation ($\sigma=0.05$); energy
+adaptive/coevolutionary complex network \cite{gross2008adaptive} (Sect.~3.4). The resource pool regenerates logistically; reproduction requires an energy
+threshold and copies traits with Gaussian mutation ($\sigma=0.05$, clipped
+to $[0,1]$); energy
 exhaustion or age causes death; founding ages are staggered to avoid cohort
 artifacts.
 
@@ -174,7 +175,8 @@ w_i(a,t) \;=\; w_a\big(\theta_i, x_i(t)\big) \;+\; \gamma_i\, g\, f_a\big(b(t)\b
 \end{equation}
 where $x_i(t)$ is $i$'s local state, $g$ the global feedback gain, $f_a$ the
 response rule, and the
-base propensities are harvest $1+\mathbf{1}[e_i<15]$, share
+base propensities are harvest $1+\mathbf{1}[e_i<15]$ (yield scaled by
+$\theta_{\mathrm{risk}}$), share
 $0.6\theta_{\mathrm{coop}}\theta_{\mathrm{share}}$, connect
 $0.4\theta_{\mathrm{soc}}+0.3\theta_{\mathrm{expl}}$, prune $0.08$, reproduce
 $0.5\,\mathbf{1}[e_i\geq30]$ and idle $0.2$ ($e_i$ = energy).
@@ -183,7 +185,7 @@ $f_{\mathrm{connect}} = \max(0,\, b_{\mathrm{frag}}-0.3)$,
 $f_{\mathrm{share}} = \max(0,\, 0.5-b_{\mathrm{coop}}) + 0.5\max(0,\,
 b_{\mathrm{ineq}}-0.5)$,
 $f_{\mathrm{harvest}} = \max(0,\, b_{\mathrm{turn}}-0.5)$, and
-$f_{\mathrm{prune}} = 0.3\max(0,\, b_{\mathrm{cent}}-0.6)$.
+$f_{\mathrm{prune}} = 0.3\max(0,\, b_{\mathrm{conc}}-0.6)$.
 In the \emph{conformist} regime agents imitate the reported norm instead:
 $f_{\mathrm{share}} = b_{\mathrm{coop}}$,
 $f_{\mathrm{prune}} = 0.5\, b_{\mathrm{frag}}$,
@@ -387,7 +389,7 @@ treated worlds move toward their actual broadcasts: passive medians $0.0119$,
 $0.0300$, $0.0073$. Every $\Delta P$ is therefore negative: $-0.0036$ (F), $-0.0058$ (R),
 $-0.0055$ (N), each $p\!<\!2\times10^{-5}$. Between-condition contrasts of
 $\Delta P$ are significant in neither campaign (F vs N: harsh $p=0.084$,
-flagship $p=0.63$; R vs N: $p=0.95$). Raw $P$ is thus dominated by the
+flagship $p=0.63$; R vs N: $n{=}30$, $p=0.95$). Raw $P$ is thus dominated by the
 intrinsic dynamics above, which align best with realistic references and worst
 with noise (excluding the shock transition shifts every median by
 $<\!0.0004$).
@@ -398,7 +400,7 @@ under $\varepsilon\in\{0.01,0.02,0.05\}$ every $\Delta P$ stays negative (all
 $p<2\times10^{-5}$) and the adjusted F-vs-N contrast stays ns ($p\geq0.052$).
 Observer cadence is not a comparable robustness axis: retiming the observer
 retimes the feedback dose itself, so $\Delta t$ is a treatment parameter;
-cadence-resolved analyses accompany the released data.
+supplementary cadence-resolved analyses accompany the released data.
 
 Under the primary corrective regime Eq.~\ref{eq:pull} thus provides \emph{no
 evidence of aggregate content-specific attraction beyond intrinsic dynamics}.
