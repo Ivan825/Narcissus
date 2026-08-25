@@ -95,38 +95,37 @@ responses scale with $\gamma_i g$; hub-targeted pruning with $\gamma_i$ alone.}
 \end{figure}
 
 \section{Related Work}
-\textbf{Adaptive and temporal networks.} Coevolution of state and topology
-\cite{gross2008adaptive,holme2012temporal} covers our setting; robustness to
-targeted node removal is classical \cite{albert2000error}, and we use hub
-removal as a standardized perturbation.
-\textbf{Global coupling.} A mean field fed back to units reshapes collective
-dynamics \cite{kuramoto1984chemical}; ours is multidimensional, potentially
-\emph{false}, and its units are born, die, and evolve.
-\textbf{Reflexivity and reactive measurement.} Self-fulfilling prophecy
-\cite{merton1948self}, reflexivity in markets \cite{soros2013fallibility}, and
-the reactivity of rankings and metrics
+\textbf{Adaptive networks and global coupling.} Coevolution of state and
+topology \cite{gross2008adaptive,holme2012temporal} covers our setting;
+robustness to targeted node removal is classical \cite{albert2000error}, and
+we use hub removal as a standardized perturbation. A mean field fed back to
+units reshapes collective dynamics \cite{kuramoto1984chemical}; ours is
+multidimensional, potentially \emph{false}, and its units are born, die, and
+evolve.
+\textbf{Reflexivity and performative prediction (our baseline).}
+Self-fulfilling prophecy \cite{merton1948self}, reflexivity in markets
+\cite{soros2013fallibility}, and the reactivity of rankings and metrics
 \cite{espeland2007rankings,strathern1997improving} motivate our
-false-broadcast conditions; here they are dosable and ablatable.
-\textbf{Performative prediction and endogenous signals.} Predictions that
-alter the distribution they forecast are formalized as performative
-prediction \cite{perdomo2020performative,hardt2025performative}, including
-networked settings \cite{wang2023network} and populations deciding whether to
-trust predictions of collective outcomes \cite{gois2024performative}. There
-trust is \emph{updated} from past accuracy; here attention is inherited and
-mutated with no rule referencing reliability. Self-fulfilling signals of an
-endogenous network state arise in congestion games \cite{iwase2017self}, and
-causal identification of performative effects without randomization is an
-active problem \cite{cheng2024causal}. Ours is narrower and complementary: a
-concrete false-positive failure mode of directional-alignment metrics,
-diagnosed with paired passive twins (Sect.~\ref{sec:pull}), plus turnover and
-a heritable receiver-sensitivity trait absent from these models.
-\textbf{Signaling and the evolution of trust.} In sender--receiver games
-receivers can evolve to ignore unreliable signals \cite{skyrms2010signals};
+false-broadcast conditions; here they are dosable and ablatable. The formal
+baseline we build on is performative prediction --- predictions that alter
+the distribution they forecast \cite{perdomo2020performative,hardt2025performative},
+including networked settings \cite{wang2023network}, self-fulfilling signals
+of an endogenous network state \cite{iwase2017self}, and, closest to us,
+populations deciding whether to trust predictions of collective outcomes
+\cite{gois2024performative}. That line updates trust from past accuracy and
+leaves causal identification of performative effects without randomization
+open \cite{cheng2024causal}; we extend it in two ways: a passive-twin design
+exposing a concrete false-positive failure mode of directional-alignment
+metrics (Sect.~\ref{sec:pull}), and a heritable receiver-sensitivity trait
+--- inherited and mutated with no rule referencing reliability --- plus
+demographic turnover, absent from these models.
+\textbf{Signaling, trust, and agent-based modeling.} In sender--receiver
+games receivers can evolve to ignore unreliable signals \cite{skyrms2010signals};
 here the signal is \emph{self-referential} and attention to it is a
 continuous heritable trait in an energy economy, not a payoff matrix.
-\textbf{Agent-based modeling.} Collective opinion and cooperation are
-mainstays \cite{castellano2009statistical,perc2017statistical}; we follow the
-generative ABM tradition \cite{epstein1996growing,bonabeau2002agent}; the
+Collective opinion and cooperation are ABM mainstays
+\cite{castellano2009statistical,perc2017statistical}; we follow the
+generative tradition \cite{epstein1996growing,bonabeau2002agent}; the
 engine draws on Mesa \cite{kazil2020mesa} and NetworkX
 \cite{hagberg2008exploring}. Multi-agent RL treats global state as an
 \emph{architectural} aid \cite{foerster2016learning}; here it is an
@@ -144,7 +143,10 @@ and $\bar\gamma$ its population mean.
 Agents hold energy; each step they pay metabolism and choose one action ---
 harvest, share (costly transfer to a neighbor), connect, prune, reproduce, or
 idle --- with probabilities proportional to trait- and state-dependent
-propensities. The resource pool regenerates logistically; reproduction requires an energy
+propensities. The agents are the vertices of a time-varying undirected graph
+$G(t)=(V(t),E(t))$: \emph{connect} and reproduction add interaction edges,
+\emph{prune} and death remove them --- topology coevolves with state, an
+adaptive network \cite{gross2008adaptive} (structure: Sect.~3.4). The resource pool regenerates logistically; reproduction requires an energy
 threshold and copies traits with Gaussian mutation ($\sigma=0.05$); energy
 exhaustion or age causes death; founding ages are staggered to avoid cohort
 artifacts.
@@ -250,7 +252,8 @@ make no small-world claim --- and degree CV $0.6$--$0.74$. Feedback acts on a
 small, dense, degree-heterogeneous clustered graph, not homogeneous mixing.
 
 \subsection{Reproducibility}
-The simulation is deterministic given (configuration, seed): one PRNG drives
+The simulation is deterministic given (configuration, seed): one
+pseudorandom number generator (PRNG) drives
 behavioral choices, a dedicated stream generates broadcast signals (so
 constructing noise never advances the behavioral PRNG), agents act in sorted
 order, and a state hash certifies replay across machines and operating systems.
