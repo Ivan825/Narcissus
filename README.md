@@ -1,10 +1,10 @@
-# Project ONE
+# Narcissus
 
 **What happens to a population of agents when it is told its own collective state — and what happens when that description is false?**
 
 ![Sensitivity sweep](paper/figures/paper_fig_sweep.png)
 
-Project ONE is a controlled, fully reproducible laboratory for *recursive self-model feedback* in evolving multi-agent networks. Temporary agents are born, cooperate, compete, reproduce and die, forming an adaptive network G(t). A global observer periodically compresses the macrostate — fragmentation, degree concentration, cooperation, inequality, turnover — into a self-model S(t) and, depending on the experimental condition, broadcasts it back to the agents **accurately, systematically falsified, replayed from another run, or as matched-range random noise**:
+Narcissus is a controlled, fully reproducible laboratory for *recursive self-model feedback* in evolving multi-agent networks. Temporary agents are born, cooperate, compete, reproduce and die, forming an adaptive network G(t). A global observer periodically compresses the macrostate — fragmentation, degree concentration, cooperation, inequality, turnover — into a self-model S(t) and, depending on the experimental condition, broadcasts it back to the agents **accurately, systematically falsified, replayed from another run, or as matched-range random noise**:
 
 ```
 local actions → global condition → measurement → self-model → broadcast → changed local actions
