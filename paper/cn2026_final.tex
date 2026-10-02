@@ -29,7 +29,7 @@
 \maketitle
 
 \begin{abstract}
-Networks often act on measurements of their own state: descriptions can change what they describe. We build a controlled adaptive-network model in which node states and topology coevolve, and ask when feedback from global network observables causes genuine self-fulfilling effects. Across 3{,}127 deterministic runs with paired-seed comparisons, measurement without broadcast changes nothing. A seemingly strong ``pull'' toward false and replayed self-models disappears when untreated twin trajectories are scored against matched references: intrinsic dynamics mimic performativity. Broadcasts do have real effects, reshaping cooperation and network structure, and whether a false self-model comes true, in the outcome sense, depends on how agents respond. Attention to the broadcast is heritable and evolves downward under consequential feedback --- most steeply where that feedback carries high corrective drive --- surviving three architectural controls and an ecological ensemble. The results separate apparent from genuine performativity and show that reliance on a collective self-model can itself evolve.
+Networks often act on measurements of their own state: descriptions can change what they describe. We build a controlled adaptive-network model in which node states and topology coevolve, and ask when feedback from global network observables causes genuine self-fulfilling effects. Across 3{,}127 deterministic runs with paired-seed comparisons, measurement without broadcast changes nothing. A seemingly strong ``pull'' toward false and replayed self-models disappears when untreated twin trajectories are scored against matched references: intrinsic dynamics mimic performativity. Broadcasts have real effects, reshaping cooperation and network structure, and whether a false self-model comes true, in the outcome sense, depends on how agents respond. Attention to the broadcast is heritable and evolves downward under consequential feedback --- most steeply where that feedback carries high corrective drive --- surviving three architectural controls and an ecological ensemble. These results distinguish apparent performativity from genuine feedback effects and show that reliance on a collective self-model can evolve.
 \keywords{adaptive networks, network dynamics, agent-based modeling, reflexivity, performative prediction, evolution of trust}
 \end{abstract}
 
@@ -61,16 +61,17 @@ coupling an evolving agent ecology, an adaptive interaction network, a global
 observer, and a controllable broadcast channel; (2) a six-condition causal
 design --- verifying observer-side-effect invariance and isolating the effect
 of broadcasting, with matched-range noise and replayed-self-model
-controls --- plus a \emph{passive-counterfactual methodology} for reflexivity
-metrics, under which a natural ``story pull'' statistic is fully accounted for
-by untreated twin trajectories; (3) evidence for what broadcasts \emph{do}
+controls --- and a \emph{passive-counterfactual test} for reflexivity
+metrics, showing that a natural ``story pull'' statistic can be fully
+explained by untreated twin trajectories; (3) evidence for what broadcasts \emph{do}
 change: truthful feedback doubles costly cooperation, distorted broadcasts
 mobilize or pacify depending on the lie--response pairing (reversing under
 conformity), and false and noise broadcasts densify the network while also
 reducing hub concentration; and (4) receiver sensitivity as a continuous
-heritable trait, whose \emph{population mean shifts systematically
-under feedback}, tracking the broadcast-implied corrective-drive intensity and
-surviving three architectural controls and a randomized ecological ensemble ---
+heritable trait whose \emph{population mean changes systematically under
+feedback}, tracks the broadcast-implied corrective-drive intensity, and
+remains robust across three architectural controls and a randomized
+ecological ensemble ---
 reliance on the observer is not updated by rule; it evolves. Figure~\ref{fig:loop} summarizes the design.
 
 
@@ -200,10 +201,9 @@ to a neighbor-of-a-neighbor with probability $0.7$ when available, else a
 uniform non-neighbor --- the triadic closure behind Sect.~3.4. All rule
 constants are fixed across experiments (Table~\ref{tab:params}). They are deliberately
 stylized --- mechanism probes, not calibrated models of behavior. The
-abstraction is intentional: it isolates causal pathways by which self-model
-feedback can alter adaptive systems rather than estimating human behavioral
-parameters, and the claims concern the mechanism's macroscopic, structural
-and evolutionary consequences.
+abstraction is intentional: the model is designed to isolate causal pathways
+through which self-model feedback alters an adaptive system, not to estimate
+human behavioral parameters.
 
 \begin{table}[t]
 \centering\footnotesize
@@ -407,9 +407,9 @@ supplementary cadence-resolved analyses accompany the released data.
 Under the primary corrective regime Eq.~\ref{eq:pull} thus provides \emph{no
 evidence of aggregate content-specific attraction beyond intrinsic dynamics}.
 The small negative $\Delta P$, similar across signal types, is consistent with
-broadcasts mildly dampening that drift. This is the paper's methodological
-result: a statistic natural in empirical performativity studies registers
-large, internally consistent, entirely artifactual ``steering'' unless checked
+broadcasts mildly dampening that drift. The methodological implication is
+that a statistic natural in empirical performativity studies can register
+large, internally consistent but entirely artifactual ``steering'' unless checked
 against passive twins --- we offer $\Delta P$ as a paired diagnostic for
 designs with an untreated twin, not a general identification theorem.
 
@@ -506,8 +506,8 @@ continuous relationship: evolved attention tracks the broadcast-implied
 corrective-drive intensity $I = g\,\langle\textstyle\sum_a f_a(b(t))\rangle$
 --- computable from the broadcast alone --- across the 15 sweep cells almost
 perfectly (Spearman $\rho=-0.99$; $\rho=-0.83$ at run level, $n=300$). Utopia ($I=0$) is untouched, truth declines less where its corrective drive is
-smaller at equilibrium, and high-drive broadcasts pay most: corrective-drive
-intensity, rather than veracity alone, appears to organize the response.
+smaller at equilibrium, and high-drive broadcasts pay most: the response appears organized more by
+corrective-drive intensity than by veracity alone.
 
 Three caveats. $I$ omits the per-agent factor $\gamma_i$, the quantity under
 selection, and comes from realized rather than independently randomized
@@ -596,15 +596,16 @@ replication, this is \emph{local} ecological robustness, not
 arbitrary-ecology generality.
 
 \section{Discussion and Limitations}
-First-order response directions are encoded in the rules; the findings live
-one level up. First, the methodological lesson: a statistic that looked like compelling
+First-order response directions are encoded in the rules; our claims concern
+the resulting macroscopic, structural, and evolutionary consequences. First,
+the methodological lesson: a statistic that looked like compelling
 evidence --- positive, replicated, largest for realistic signals --- was fully
 explained by intrinsic dynamics on passive twins. Empirical tests face this
 identification problem \cite{cheng2024causal}, typically without the
 untreated twin our platform provides. Second, the substantive findings:
 broadcasts change behavior and structure with a regime-dependent taxonomy of
-lies; above all, the credibility of a collective self-model becomes an
-evolving property.
+lies; more importantly, reliance on the collective self-model becomes an
+evolving population property.
 The response mappings are controlled mechanism probes, not calibrated
 behavioral models: they isolate how alternative receiver transformations turn
 identical broadcasts into different outcomes, and although their strength and
@@ -614,8 +615,9 @@ limitations: local rather than arbitrary-ecology generality (Sect.~5.7); and
 each run evolves a single adaptive population network --- competing
 populations or coupled self-model ecosystems remain open directions.
 
-Metric-driven infrastructure --- autoscalers, observability pipelines,
-ranking systems \cite{espeland2007rankings} --- is this loop, and under
+Metric-driven infrastructures --- autoscalers, observability pipelines,
+ranking systems \cite{espeland2007rankings} --- instantiate the same
+feedback loop: under
 deficit-driven responses \emph{flattering telemetry can be operationally
 equivalent to no telemetry} while raising no alarms; agent populations sharing
 dashboards \cite{park2023generative} are a natural empirical target, given a
@@ -630,8 +632,8 @@ passive counterfactual, a caution for empirical performativity claims;
 (iii) which lies come true, in the outcome sense, is set by the lie--response
 pair, not the lie alone; and (iv) heritable attention to the collective
 self-model declines across generations, tracking broadcast-implied corrective
-drive within the corrective regime --- reliance on a self-model is an evolving quantity that high-drive
-feedback spends down. Future work: learned response policies and
+drive within the corrective regime --- reliance on a self-model is an evolving
+quantity that tends to decline under high-drive feedback. Future work: learned response policies and
 language-model agents.
 
 \smallskip
