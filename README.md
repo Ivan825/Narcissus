@@ -140,7 +140,7 @@ Every run is deterministic given (config, seed); state hashes verify replay acro
 
 ## Paper
 
-*A Network and Its Reflection: What True, False, and Noise Self-Model Broadcasts Do and Do Not Change in an Evolving Multi-Agent Network* — under submission to Complex Networks 2026. Sources and PDF in [`paper/`](paper/); research plan and original proposal in [`docs/`](docs/). The tag `cn2026-submission` marks the exact state the paper describes; every run regenerates deterministically from the pinned configuration and seed (see *Reproduce everything* above).
+*A Network and Its Reflection: What True, False, and Noise Self-Model Broadcasts Do and Do Not Change in an Evolving Multi-Agent Network* — Accepted as Full Paper for Oral Presentation at Complex Networks 2026. Sources and PDF in [`paper/`](paper/); research plan and original proposal in [`docs/`](docs/). The tag `cn2026-submission` marks the exact state the paper describes; every run regenerates deterministically from the pinned configuration and seed (see *Reproduce everything* above).
 
 ## Status
 
